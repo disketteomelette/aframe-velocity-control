@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="aframe-velocity-control.js">  </script>
+</head>
+<body>
+  <a>Ejemplo de componente velocidad de animación - github.com/disketteomelette</a>
+  <a-scene>
+    <a-entity camera look-controls>
+      <a-cursor></a-cursor>
+    </a-entity>
+    
+    <!-- Esfera 1 (Blanca)-->
+    <a-sphere id="sphere1" position="-2 1.6 -2" radius="0.3" color="gray" animation="property: position; dir: alternate; dur: 1000; easing: linear; from: 0 0 -1; to: 0 1 -1; loop: true"></a-sphere>
+    
+    <!-- Botones de velocidad para Esfera 1 -->
+    <a-entity position="-1 0.8 -2">
+      <a-box id="increaseVelocidad1" color="green" scale="0.2 0.2 0.1" velocity-control="target: #sphere1; factor: 1.5; type: increase"></a-box>
+      <a-box id="decreaseVelocidad1" color="red" scale="0.2 0.2 0.1" position="0 -0.3 0" velocity-control="target: #sphere1; factor: 1.5; type: decrease"></a-box>
+    </a-entity>
+
+    <!-- Esfera 2 (Negra) -->
+    <a-sphere id="sphere2" position="2 1.6 -2" radius="0.3" color="black" animation="property: position; dir: alternate; dur: 2000; easing: easeInOutSine; from: 0 0 -1; to: 0 1 -1; loop: true"></a-sphere>
+    
+    <!-- Botones de velocidad para Esfera 2 -->
+    <a-entity position="1 0.8 -2">
+      <a-box id="increaseVelocidad2" color="green" scale="0.2 0.2 0.1" velocity-control="target: #sphere2; factor: 2; type: increase"></a-box>
+      <a-box id="decreaseVelocidad2" color="red" scale="0.2 0.2 0.1" position="0 -0.3 0" velocity-control="target: #sphere2; factor: 2; type: decrease"></a-box>
+    </a-entity>
+  </a-scene>
+</body>
+</html>
