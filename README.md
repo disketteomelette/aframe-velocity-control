@@ -7,9 +7,8 @@ Live demo: https://hypnotic-berry-custard.glitch.me/
 
 # how to call it
 
-Put the js file in your desired directory and call it with a script tag on your scene:
+Put the js file in your desired directory and call it with a script tag on your scene: <script src="aframe-velocity-control.js"> 
 
-  <script src="aframe-velocity-control.js"> 
 
 # component properties
 
